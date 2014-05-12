@@ -1,7 +1,7 @@
 package ppv2;
 
 public class CombineTwoStrings {
-    public boolean validCombinationRecursive(String first, String second, String combination) {
+    public boolean isValidShuffleRecursive(String first, String second, String combination) {
         if ((first.length() + second.length()) != combination.length()) {
             //Combination of strings is either too short or too long
             return false;
@@ -11,11 +11,11 @@ public class CombineTwoStrings {
             return true;
         }
 
-        if (first.length() > 0 && combination.charAt(0) == first.charAt(0) && validCombinationRecursive(first.substring(1), second, combination.substring(1))) {
+        if (first.length() > 0 && combination.charAt(0) == first.charAt(0) && isValidShuffleRecursive(first.substring(1), second, combination.substring(1))) {
             return true;
         }
 
-        if (second.length() > 0 && combination.charAt(0) == second.charAt(0) && validCombinationRecursive(first, second.substring(1), combination.substring(1))) {
+        if (second.length() > 0 && combination.charAt(0) == second.charAt(0) && isValidShuffleRecursive(first, second.substring(1), combination.substring(1))) {
             return true;
         }
 
