@@ -8,6 +8,7 @@ public class CombineTwoStrings {
         }
 
         if (combination.equals(first + second) || combination.equals(second + first)) {
+            //Combining first + second string equals the combined string
             return true;
         }
 
